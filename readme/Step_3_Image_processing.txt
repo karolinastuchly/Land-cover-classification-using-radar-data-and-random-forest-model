@@ -1,0 +1,32 @@
+Overview:
+This script performs image processing tasks including removing extreme pixel values from GeoTIFF files, applying Lee filtering to enhance image quality, and converting pixel values to decibels (dB). It utilizes libraries such as OpenCV, NumPy, ImageIO, GDAL, and multiprocessing for efficient processing.
+
+Requirements:
+Python 3.x
+Required Python libraries: cv2, numpy, imageio, osgeo, multiprocessing
+Setup:
+Ensure that all required Python libraries are installed. You can install them using pip:
+
+pip install numpy imageio gdal
+Place your input GeoTIFF files in the designated input folder.
+
+Usage:
+Run the script in a Python environment.
+
+python image_processing.py
+The script will perform the following tasks:
+
+Remove extreme pixel values from GeoTIFF files.
+Apply Lee filtering to enhance image quality.
+Convert pixel values to decibels (dB).
+Check the output folders for processed images.
+
+File Structure:
+image_processing.py: The main Python script for image processing tasks.
+input/: Directory containing input GeoTIFF files.
+output/: Directory containing processed images.
+Outputs:
+output/*.tif: Processed GeoTIFF files.
+Notes:
+Make sure to update file paths and other parameters according to your specific data and requirements.
+Additional customization and optimization can be done based on specific use cases and preferences.

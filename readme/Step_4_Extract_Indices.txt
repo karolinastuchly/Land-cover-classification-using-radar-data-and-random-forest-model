@@ -1,0 +1,32 @@
+Overview:
+This script extracts several indices from SAR (Synthetic Aperture Radar) data stored in a CSV file. It calculates indices such as VV/VH ratio, VH/VV ratio, NDPI (Normalized Difference Polarization Index), POL Index (Polarization Index), DPSVI (Dual-Polarization Synthetic Vegetation Index), and DPSVIm (Modified Dual-Polarization Synthetic Vegetation Index) for each date specified in the column names.
+
+Requirements:
+Python 3.x
+Required Python libraries: pandas, numpy, re
+Setup:
+Install the required Python libraries using pip:
+
+pip install pandas numpy
+Place your CSV file containing SAR data in the appropriate directory.
+
+Usage:
+Modify the script to specify the input CSV file path.
+
+Run the script in a Python environment:
+
+python extract_indices.py
+The script will perform the following steps:
+
+Load the CSV file into a DataFrame.
+Extract column names with dates.
+Calculate various indices (VV/VH ratio, VH/VV ratio, NDPI, POL Index, DPSVI, DPSVIm) for each date.
+Concatenate the new indices dataframes with the original dataframe.
+Save the updated dataframe with indices as a new CSV file.
+Inputs:
+CSV File: Input data file containing SAR data with column names formatted as dates.
+Outputs:
+INDEKSY.csv: CSV file containing SAR data with additional calculated indices.
+Notes:
+Ensure that the CSV file is properly formatted with numerical SAR data.
+Adjust the file path in the script according to your data.

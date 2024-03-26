@@ -1,0 +1,37 @@
+Overview:
+This script visualizes the feature space by creating a scatter plot of two selected columns from a CSV file. It also removes outliers based on standard deviation and scales the data using Min-Max scaling.
+
+Requirements:
+Python 3.x
+Required Python libraries: pandas, matplotlib, numpy, scikit-learn
+Setup:
+Install the required Python libraries using pip:
+
+pip install pandas matplotlib numpy scikit-learn
+Place your CSV file containing the data in the appropriate directory.
+
+Usage:
+Modify the script to specify the input CSV file path and the columns to be plotted (x_column and y_column).
+
+Run the script in a Python environment:
+
+python feature_space_visualization.py
+The script will perform the following steps:
+
+Load the CSV file into a DataFrame.
+Normalize the selected columns using Min-Max scaling (optional).
+Remove outliers based on standard deviation.
+Create a scatter plot of the selected columns, color-coded by class.
+Save the plot as a JPG image.
+File Structure:
+feature_space_visualization.py: The main Python script for feature space visualization.
+lasyrazem.csv: Input CSV file containing the data.
+[x_column]_[y_column]_scaled_no_outliers.jpg: Output scatter plot image.
+Inputs:
+CSV File: Input data file containing columns to be visualized.
+Outputs:
+[x_column]_[y_column]_scaled_no_outliers.jpg: Scatter plot image showing the feature space.
+Notes:
+Ensure that the CSV file is properly formatted with numerical data.
+Adjust the file paths and column names in the script according to your data.
+Modify the color and labels for each class in the script's dictionary (class_info) as needed.

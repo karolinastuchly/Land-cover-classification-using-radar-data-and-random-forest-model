@@ -1,0 +1,42 @@
+Overview:
+This script performs the following tasks:
+
+Extracts features from SAR (Synthetic Aperture Radar) data stored in GeoDataFrame and raster files.
+Classifies the extracted features using a pre-trained machine learning model.
+Writes the classification results to a GeoTIFF file.
+Requirements:
+Python 3.x
+Required Python libraries: geopandas, rasterio, scikit-learn, numpy, pandas
+Setup:
+Install the required Python libraries using pip:
+
+pip install geopandas rasterio scikit-learn numpy pandas
+Place your shapefile containing centroid coordinates (29_33.shp) and raster files (*.tif or *.img) in the appropriate directories.
+
+Usage:
+Modify the script to specify the input file paths for the shapefile (shapefile_path) and raster files (tif_folder).
+
+Ensure that the shapefile contains centroid points for the desired AOI (Area of Interest).
+
+Specify the pre-trained machine learning model file path (filename).
+
+Run the script in a Python environment:
+
+python sar_classification.py
+The script will perform the following steps:
+
+Extract features from raster files and associate them with centroid points from the shapefile.
+Load the pre-trained machine learning model.
+Scale and preprocess the extracted features.
+Classify the features using the loaded model.
+Write the classification results to a GeoTIFF file.
+Inputs:
+Centroid Shapefile: Input shapefile containing centroid points for the AOI.
+Raster Files: Input raster files containing SAR data.
+Outputs:
+grid.csv: CSV file containing extracted features associated with centroid points.
+Classification GeoTIFF: GeoTIFF file containing the classification results.
+Notes:
+Ensure that the input raster files contain relevant SAR data for classification.
+Adjust the file paths and file format assumptions according to your data.
+This script assumes that the pre-trained model is already available. If not, train a model using your data and update the file path accordingly.

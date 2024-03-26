@@ -1,0 +1,29 @@
+Overview:
+This script is designed to merge multiple raster datasets based on their dates, using the rioxarray library. It reads CSV files containing paths to raster files and their corresponding dates, merges the raster datasets for each unique date, and saves the merged datasets as GeoTIFF files.
+
+Requirements:
+Python 3.x
+Required Python libraries: pandas, numpy, rioxarray
+Setup:
+Ensure that all required Python libraries are installed. You can install them using pip:
+
+pip install pandas numpy rioxarray
+Place your CSV files containing paths to raster files (df_sliceVV.csv and df_sliceVH.csv) in the appropriate directory and update the file paths in the script accordingly.
+
+Usage:
+Run the script in a Python environment.
+
+python merge_raster.py
+The script will read the CSV files, merge raster datasets based on their dates, and save the merged datasets as GeoTIFF files.
+
+Check the output directory for the merged GeoTIFF files.
+
+File Structure:
+merge_raster.py: The main Python script for merging raster datasets.
+data/: Directory containing CSV files (df_sliceVV.csv and df_sliceVH.csv) with paths to raster files.
+output/: Directory containing output merged GeoTIFF files.
+Outputs:
+output/*.tif: Merged raster datasets saved as GeoTIFF files.
+Notes:
+Make sure to update file paths and other parameters according to your specific data and requirements.
+Additional customization and optimization can be done based on specific use cases and preferences.

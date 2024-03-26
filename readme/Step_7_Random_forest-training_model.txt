@@ -1,0 +1,39 @@
+Overview:
+This script uses Random Forest Classifier to classify geospatial data into various land cover classes. It preprocesses the data, trains a Random Forest Classifier model, evaluates the model performance, and visualizes the results.
+
+Requirements:
+Python 3.x
+Required Python libraries: numpy, pandas, scikit-learn, seaborn, matplotlib, geopandas, shapely
+Setup:
+Install the required Python libraries using pip:
+
+pip install numpy pandas scikit-learn seaborn matplotlib geopandas shapely
+Place your training data CSV file and shapefile with point geometry in the appropriate directories.
+
+Usage:
+Run the script in a Python environment:
+
+python random_forest_classifier.py
+The script will perform the following steps:
+
+Preprocess the training data.
+Train a Random Forest Classifier model.
+Evaluate the model performance using confusion matrix, classification report, and overall accuracy.
+Visualize the confusion matrix and correlation matrix.
+Save the trained model and classification results as shapefiles.
+File Structure:
+random_forest_classifier.py: The main Python script for Random Forest Classifier.
+lasyrazem.csv: Training data CSV file containing features and target classes.
+false_classification.shp: Shapefile containing falsely classified points.
+true_classification.shp: Shapefile containing correctly classified points.
+correlation_matrix.png: Visualization of the correlation matrix.
+confusion_matrix.png: Visualization of the confusion matrix.
+Outputs:
+false_classification.shp: Shapefile containing falsely classified points.
+true_classification.shp: Shapefile containing correctly classified points.
+correlation_matrix.png: Visualization of the correlation matrix.
+confusion_matrix.png: Visualization of the confusion matrix.
+Notes:
+Ensure that the training data is properly preprocessed and formatted.
+Adjust the file paths in the script according to your directory structure and file names.
+Additional preprocessing steps or feature engineering can be added as needed.

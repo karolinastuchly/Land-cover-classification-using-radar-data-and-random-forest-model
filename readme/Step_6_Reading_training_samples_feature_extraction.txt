@@ -1,0 +1,31 @@
+Overview:
+This script processes geospatial data, including raster images and point shapefiles. It extracts pixel values from raster images at point locations and combines them with attribute data from the shapefile. The resulting dataset is then saved as a CSV file.
+
+Requirements:
+Python 3.x
+Required Python libraries: geopandas, pandas, numpy, matplotlib, rasterio, raster2xyz, scikit-learn
+Setup:
+Install the required Python libraries using pip:
+
+pip install geopandas pandas numpy matplotlib rasterio scikit-learn
+Place your point shapefile and raster images in the appropriate directories.
+
+Usage:
+Run the script in a Python environment:
+
+python geospatial_processing.py
+The script will process the raster images and extract pixel values at point locations from them.
+
+The extracted values will be combined with attribute data from the shapefile, and the resulting dataset will be saved as a CSV file.
+
+File Structure:
+geospatial_processing.py: The main Python script for processing geospatial data.
+input/: Directory containing the input point shapefile.
+tif/: Directory containing the input raster images.
+output/: Directory where the processed CSV file will be saved.
+Outputs:
+output/lasyrazem.csv: Processed dataset containing extracted raster values and shapefile attributes.
+Notes:
+Ensure that the point shapefile and raster images are properly aligned in terms of coordinate reference systems (CRS).
+Additional preprocessing steps such as scaling or normalization of raster values can be added as needed.
+Adjust the file paths in the script according to your directory structure and file names.

@@ -1,0 +1,42 @@
+Overview:
+These scripts perform the evaluation and visualization of SAR data classification results. They include the following steps:
+
+Extracting Validation Points: Extracts validation points from shapefiles and associates them with classification results from raster files.
+Calculating Evaluation Metrics: Computes various evaluation metrics such as F1-score, Cohen's Kappa, AUC, accuracy, precision, recall, and confusion matrices.
+Visualizing Results: Generates ROC curves and confusion matrices to visualize the performance of the classification model.
+Requirements:
+Python 3.x
+Required Python libraries: geopandas, pandas, numpy, matplotlib, rasterio, seaborn, scikit-learn
+Setup:
+Install the required Python libraries using pip:
+
+pip install geopandas pandas numpy matplotlib rasterio seaborn scikit-learn
+Ensure that you have the necessary input files:
+
+Validation Points: Shapefiles containing validation points.
+Classification Results: GeoTIFF files containing classification results.
+CSV Folder: Folder where CSV files containing validation points and predicted classes will be saved.
+Output Folder: Folder where evaluation metrics and visualization results will be saved.
+Usage:
+Modify the scripts to specify the paths to your input files and folders.
+
+Run the scripts in a Python environment:
+
+python extract_validation_points.py
+python evaluate_classification.py
+The scripts will perform the following tasks:
+
+Extract validation points from shapefiles and associate them with classification results from raster files.
+Calculate evaluation metrics such as F1-score, Cohen's Kappa, AUC, accuracy, precision, recall, and confusion matrices.
+Visualize the results using ROC curves and confusion matrices.
+Save the evaluation metrics, ROC curves, and confusion matrices to the specified output locations.
+Inputs:
+Validation Points: Shapefiles containing validation points.
+Classification Results: GeoTIFF files containing classification results.
+Outputs:
+CSV Folder: CSV files containing validation points and predicted classes.
+Output Folder: Text files containing evaluation metrics and PNG files containing ROC curves and confusion matrices.
+Notes:
+Ensure that the input files are correctly formatted and contain relevant data for evaluation.
+Update the file paths and file format assumptions according to your data.
+Customize the evaluation metrics and visualization options as needed.
