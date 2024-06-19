@@ -1,0 +1,32 @@
+Forest Change Detection
+This script analyzes changes in forest cover between two raster maps and generates a change map along with area statistics.
+
+Description
+The script forest_change_detection.py reads two raster maps representing forest cover at different times (first_map and second_map). It identifies areas where forest loss and gain have occurred between these maps and computes the corresponding areas in square meters.
+
+Methods
+read_raster(file_path): Reads a raster file and returns its data as a numpy array.
+
+compare_forest_change(first_map, second_map): Compares two raster maps to identify pixels where forest loss and gain have occurred based on a specific code (here, 6 represents forest).
+
+calculate_area(pixels, pixel_size=400): Calculates the total area in square meters from the number of pixels identified as forest loss or gain.
+
+create_change_map(first_path, second_path, output_path, txt_output_path): Main function that integrates the above methods to generate a change map and save area statistics to a text file (txt_output_path). It also saves the change map as a raster file (output_path).
+
+Outputs
+Change Map: A raster file (output_path) indicating forest loss (1) and gain (2).
+
+Text File: A text file (txt_output_path) summarizing total areas of forest loss, gain, and net change.
+
+Usage
+To use this script, provide paths to the two input raster maps (first_file, second_file), an output path for the change map (output_file), and an output path for the text summary (txt_output_file). Example usage:
+
+bash
+Skopiuj kod
+python forest_change_detection.py --first_file path_to_first_map.tif --second_file path_to_second_map.tif --output_file path_to_output_change_map.tif --txt_output_file path_to_output_summary.txt
+Requirements
+Python 3.x
+Required Python packages: rasterio, numpy
+Notes
+Ensure that the raster maps (first_map and second_map) are in a format supported by rasterio.
+The script assumes that forest areas are coded as 6 in the input raster maps.
