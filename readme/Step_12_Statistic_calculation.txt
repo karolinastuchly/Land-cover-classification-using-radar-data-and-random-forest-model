@@ -1,0 +1,37 @@
+README: Forest Density Heatmap and F1-Score Analysis
+Overview
+This project includes a set of Python scripts designed to perform spatial analysis and visualize results related to forest density and F1-scores for specific classes. The scripts process raster data, shapefiles, and text files containing statistical results, culminating in the generation of heatmaps that visualize the analyzed data.
+
+Structure
+The project consists of three main components:
+
+Calculating Statistics for Shapefile Regions
+F1-Score Analysis and Visualization
+Forest Density Heatmap
+1. Calculating Statistics for Shapefile Regions
+This component reads a raster file and shapefiles defining regions of interest. It calculates statistics such as the total area and percentage share for each class within the raster data, masked by the shapefile regions.
+
+Key Functions:
+calculate_statistics(raster, transform, shp_file_path, region_name): Calculates statistics for each class in the raster data within the boundaries of a given shapefile.
+Main Script: Opens the raster file, iterates through shapefiles, calls calculate_statistics, and writes the results to an output text file.
+Usage:
+Define the paths to the raster file, shapefiles, and output folder.
+Run the script to generate statistical summaries in text files.
+2. F1-Score Analysis and Visualization
+This component processes a text file containing F1-scores for different regions and visualizes the scores on a map.
+
+Key Functions:
+load_f1_scores(file_path): Extracts F1-scores from a text file and returns a DataFrame.
+Main Script: Loads F1-scores, associates them with corresponding shapefiles, and creates a GeoDataFrame for visualization.
+Usage:
+Define the path to the F1-score file and the folder containing shapefiles.
+Run the script to generate a heatmap of F1-scores.
+3. Forest Density Heatmap
+This component reads text files containing forest density statistics and visualizes the percentage share of forest areas on a map.
+
+Key Functions:
+load_data(file_path): Extracts the percentage share of forest area from a text file.
+Main Script: Loads forest density data, associates them with corresponding shapefiles, and creates a GeoDataFrame for visualization.
+Usage:
+Define the path to the folder containing the forest density text files and the folder containing shapefiles.
+Run the script to generate a heatmap of forest density.
